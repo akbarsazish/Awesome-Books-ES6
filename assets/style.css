@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-size: 16px;
+}
+
+section {
+  padding: 10%;
+}
+
+.table th {
+  font-size: 16px;
+  padding: 5px 30px;
+  border: 1px solid #333;
+}
