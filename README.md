@@ -1,4 +1,4 @@
-# Sazish-Academy
+# Awesome-Books
 <a name="readme-top"></a>
 
 <div align="center">
@@ -60,7 +60,7 @@
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> - [Live Demo On Gh-pages](https://akbarsazish.github.io/portfolio)
+> - [Live Demo On Gh-pages](#)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -79,7 +79,7 @@ HTML, CSS, Git and GitHub also Linters
 
 ### Setup
 cd your-desired-folder
-git clone git@github.com:akbarsazish/Portfolio.git
+git clone https://github.com/akbarsazish/awesome-books.git
 
 
 
