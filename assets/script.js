@@ -1,3 +1,29 @@
+  // get book collection from localStorage, or initialize an empty array
+  let books = JSON.parse(localStorage.getItem("books")) || [];
+
+  // Display all books 
+  function displayBooks() {
+    const bookList = document.getElementById("bookList");
+    bookList.innerHTML = "";
+
+    books.forEach(function(book) {
+      const removeBtn = document.createElement("button");
+      const tr = document.createElement("tr");
+       tr.innerHTML = `<td> ${book.title} </td>
+                       <td>  ${book.author} </td> 
+                       `
+
+      removeBtn.textContent = "Remove";
+      removeBtn.classList.add("button");
+      removeBtn.onclick = function() {
+        removeBook(book);
+      };
+
+      tr.appendChild(removeBtn);
+      bookList.appendChild(tr);
+    });
+  }
+
 
 // Add a new book
 function addBook() {
@@ -27,3 +53,6 @@ function removeBook(bookToRemove) {
   localStorage.setItem("books", JSON.stringify(books));
   displayBooks();
 }
+
+  // Initial display of books
+  displayBooks();
