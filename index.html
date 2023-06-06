@@ -12,20 +12,20 @@
       <h1>Finde Awesome books from following list! </h1> <br>
       <table class="table">
           <thead>
-              <th>Title</th>
-              <th>Author</th>
+              <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th> Action</th>
+              </tr>
           </thead>
-          <tbody id="book-list">
-
+          <tbody id="bookList">
+           
           </tbody>
       </table>
-
-      <br>
-       
-      <form  id="book-form">
-        <input type="text" name="title" id="title">
-        <input type="text" name="author" id="author">
-        <input type="submit" value="Add Book">
+       <br> <hr> <br>
+        <input type="text" id="title" />
+        <input type="text" id="author" />
+        <button class="button" onclick="addBook()">Add</button>
       </form>
 
     </section>
