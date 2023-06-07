@@ -37,3 +37,19 @@ class BookCollection {
     localStorage.setItem('books', JSON.stringify(this.books));
   }
 }
+const bookCollection = new BookCollection();
+
+function addBook() {
+  const titleInput = document.getElementById('title');
+  const authorInput = document.getElementById('author');
+  const title = titleInput.value.trim();
+  const author = authorInput.value.trim();
+
+  if (title !== '' && author !== '') {
+    bookCollection.addBook(title, author);
+    titleInput.value = '';
+    authorInput.value = '';
+  }
+}
+
+bookCollection.displayBooks();
