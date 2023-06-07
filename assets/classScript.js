@@ -38,7 +38,7 @@ class BookCollection {
   }
 }
 const bookCollection = new BookCollection();
-
+// eslint-disable-next-line no-unused-vars
 function addBook() {
   const titleInput = document.getElementById('title');
   const authorInput = document.getElementById('author');
