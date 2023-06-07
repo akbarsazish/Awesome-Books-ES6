@@ -6,15 +6,15 @@ class BookCollection {
   displayBooks() {
     const bookList = document.getElementById('bookList');
     bookList.innerHTML = '';
-    this.books.forEach((book) => {
-      const removeBtn = document.createElement('button');
+    let removeBtn = document.createElement('button');
+    this.books.forEach((book, index) => {
       const tr = document.createElement('tr');
-      tr.innerHTML = `<td> ${book.title} </td> <td>  ${book.author} </td> `;
-      removeBtn.textContent = 'Remove';
-      removeBtn.classList.add('button');
+      tr.innerHTML = `<td> ${index + 1} </td> <td> ${book.title} </td> <td>  ${book.author} </td> `;
       removeBtn.onclick = () => {
         this.removeBook(book);
       };
+      removeBtn.classList.add('removeBtn');
+      removeBtn.textContent = 'Remove';
       tr.appendChild(removeBtn);
       bookList.appendChild(tr);
     });
@@ -53,3 +53,4 @@ function addBook() {
 }
 
 bookCollection.displayBooks();
+

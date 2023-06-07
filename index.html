@@ -21,13 +21,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0"> </ul>
               <ul class="navbar-nav  mb-2 mb-lg-0">
-                  <li class="nav-item">
+                  <li class="nav-item bookListNav"  id="bookListNav">
                     <a class="nav-link text-white active" aria-current="page" href="#"> Book List </a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item addBookNav" id="addBookNav">
                     <a class="nav-link text-white" href="#">Add New Book</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item contactUsNav" id="contactNav">
                     <a class="nav-link text-white" href="#"> Contact </a>
                   </li>
             </ul>
@@ -36,37 +36,69 @@
         </nav>
        </header>
 
+       <div class="content p-5 mt-4 ">
+         <div class="list-books">
+            <h3 class="text-center p-2"> List of Awesome Books </h3>
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th> No </th>
+                  <th> Title </th>
+                  <th> Author </th>
+                  <th> Action </th>
+                </tr>
+              </thead>
+              <tbody id="bookList">
+                
+              </tbody>
+            </table>
+         </div>
+        
+        <div class="add-book showHide">
+          <h3 class="text-center add-book-title"> Add Books </h3>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"> Title  </label>
+            <input type="text" class="form-control" id="title"  placeholder="title">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"> Author  </label>
+            <input type="text" class="form-control" id="author"  placeholder="author">
+          </div>
+         
+          <button class="btn btn-primary" onclick="addBook()"> Add Book </button>
+        </div>
+       </div>
 
 
+       <div class="card showHide">
+        <h3 class="card-title text-center mb-4 border-bottom">Contact Us</h3>
+        <div class="row">
+          <div class="col">
+            <div class="text-start p-3">
+              <h5 class="border-bottom">Ali Akbar Sazish</h5>
+              <p>Email:  sazishaliakbar@gmail.com</p>
+              <p>Phone:  +98 9100473242</p>
+              <p>Address:  Hafiz-e-Sharqi, Tehran, Iran</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="text-start p-3">
+              <h5 class="border-bottom">Luis Renan Pavanello</h5>
+              <p>Email:  luisrpavanello@gmail.com</p>
+              <p>Phone:  +1 987 654 3210</p>
+              <p>Address:  456 Elm St, City, Country</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-
-
-
-
-      <h1>Finde Awesome books from following list! </h1> <br>
-      <table class="table">
-          <thead>
-              <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th> Action</th>
-              </tr>
-          </thead>
-          <tbody id="bookList">
-           
-          </tbody>
-      </table>
     
-        <input type="text" id="title" />
-        <input type="text" id="author" />
-        <button class="button" onclick="addBook()">Add</button>
-      </form>
     </div>
 
     <footer>
       <nav class="navbar fixed-bottom bg-primary">
         <div class="container">
-          <a class="navbar-brand text-white" href="index.html"> Compyright </a>
+          <a class="navbar-brand text-white" href="index.html"> Copyright </a>
           <ul class="nav navbar-nav navbar-right">
             <li><a class="nav-link text-white" href="index.html">2023 © AwesomeBooks. All Rights Reserved.</a></li>
           </ul>
@@ -76,4 +108,5 @@
     </section>
   </body>
   <script src="assets/classScript.js"></script>
+  <script src="assets/navigation.js"></script>
 </html>
