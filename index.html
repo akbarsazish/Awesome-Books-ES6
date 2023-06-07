@@ -11,28 +11,36 @@
   <body>
     <section>
       <div class="container-fluid px-0">
-      <nav class="navbar fixed-top navbar-expand-lg bg-primary">
-        <div class="container">
-          <a class="navbar-brand text-white" href="index.html"> Awesome Books </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0"> </ul>
-            <ul class="navbar-nav  mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link text-white active" aria-current="page" href="#"> Book List </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#">Add New Book</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"> Contact </a>
-                </li>
-          </ul>
+       <header>
+        <nav class="navbar fixed-top navbar-expand-lg bg-primary">
+          <div class="container">
+            <a class="navbar-brand text-white" href="index.html"> Awesome Books </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0"> </ul>
+              <ul class="navbar-nav  mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link text-white active" aria-current="page" href="#"> Book List </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Add New Book</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#"> Contact </a>
+                  </li>
+            </ul>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+       </header>
+
+
+
+
+
+
 
 
       <h1>Finde Awesome books from following list! </h1> <br>
@@ -48,22 +56,23 @@
            
           </tbody>
       </table>
-       <br> <hr> <br>
+    
         <input type="text" id="title" />
         <input type="text" id="author" />
         <button class="button" onclick="addBook()">Add</button>
       </form>
     </div>
 
-    <nav class="navbar fixed-bottom bg-primary">
-      <div class="container">
-        <a class="navbar-brand text-white" href="index.html"> Compyright </a>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a class="nav-link text-white" href="index.html">2023 © AwesomeBooks. All Rights Reserved.</a></li>
-        </ul>
-      </div>
-      
-    </nav>
+    <footer>
+      <nav class="navbar fixed-bottom bg-primary">
+        <div class="container">
+          <a class="navbar-brand text-white" href="index.html"> Compyright </a>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="nav-link text-white" href="index.html">2023 © AwesomeBooks. All Rights Reserved.</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
     </section>
   </body>
   <script src="assets/classScript.js"></script>
