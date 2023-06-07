@@ -5,13 +5,19 @@ let books = JSON.parse(localStorage.getItem('books')) || [];
 function displayBooks() {
   const bookList = document.getElementById('bookList');
   bookList.innerHTML = '';
+
   books.forEach((book) => {
     const removeBtn = document.createElement('button');
     const tr = document.createElement('tr');
-    tr.innerHTML = `<td> ${book.title} </td> <td>  ${book.author} </td>`;
+    tr.innerHTML = `
+      <td>${book.title}</td>
+      <td>${book.author}</td>
+    `;
+
     removeBtn.textContent = 'Remove';
     removeBtn.classList.add('button');
-    removeBtn.onclick = function () {
+    removeBtn.onclick = () => {
+    // eslint-disable-next-line no-use-before-define
       removeBook(book);
     };
 
@@ -21,7 +27,7 @@ function displayBooks() {
 }
 
 // Add a new book
-// eslint-disable-line
+// eslint-disable-next-line no-unused-vars
 function addBook() {
   const titleInput = document.getElementById('title');
   const authorInput = document.getElementById('author');
@@ -29,25 +35,20 @@ function addBook() {
   const author = authorInput.value.trim();
 
   if (title && author) {
-// eslint-disable-line
     const book = { title, author };
-// eslint-disable-line
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
     displayBooks();
 
-// Clear input fields
+    // Clear input fields
     titleInput.value = '';
     authorInput.value = '';
   }
 }
 
 // Remove a book from the collection
-// eslint-disable-line
 function removeBook(bookToRemove) {
-// eslint-disable-line no-console 
-  books = books.filter(function(book) { 
-    return book !== bookToRemove; });
+  books = books.filter((book) => book !== bookToRemove);
 
   localStorage.setItem('books', JSON.stringify(books));
   displayBooks();
@@ -55,3 +56,6 @@ function removeBook(bookToRemove) {
 
 // Initial display of books
 displayBooks();
+
+// eslint-disable-next-line no-unused-vars
+const unusedVariable = 'example';
