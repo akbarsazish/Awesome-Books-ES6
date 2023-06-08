@@ -4,24 +4,29 @@ let books = JSON.parse(localStorage.getItem('books')) || [];
 // Display all books
 function displayBooks() {
   const bookList = document.getElementById('bookList');
+
+  // Clean the content
   bookList.innerHTML = '';
 
-  books.forEach((book) => {
+  books.forEach((book, index) => {
     const removeBtn = document.createElement('button');
     const tr = document.createElement('tr');
     tr.innerHTML = `
+      <td>${index + 1}</td>
       <td>${book.title}</td>
       <td>${book.author}</td>
     `;
 
     removeBtn.textContent = 'Remove';
-    removeBtn.classList.add('button');
+    removeBtn.classList.add('removeBtn');
     removeBtn.onclick = () => {
     // eslint-disable-next-line no-use-before-define
       removeBook(book);
     };
 
-    tr.appendChild(removeBtn);
+    const tdAction = document.createElement('td');
+    tdAction.appendChild(removeBtn);
+    tr.appendChild(tdAction);
     bookList.appendChild(tr);
   });
 }
@@ -56,6 +61,3 @@ function removeBook(bookToRemove) {
 
 // Initial display of books
 displayBooks();
-
-// eslint-disable-next-line no-unused-vars
-const unusedVariable = 'example';
