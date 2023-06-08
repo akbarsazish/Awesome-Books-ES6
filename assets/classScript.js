@@ -6,16 +6,21 @@ class BookCollection {
   displayBooks() {
     const bookList = document.getElementById('bookList');
     bookList.innerHTML = '';
-    let removeBtn = document.createElement('button');
+
     this.books.forEach((book, index) => {
       const tr = document.createElement('tr');
-      tr.innerHTML = `<td> ${index + 1} </td> <td> ${book.title} </td> <td>  ${book.author} </td> `;
+      tr.innerHTML = `<td>${index + 1}</td><td>${book.title}</td><td>${book.author}</td>`;
+
+      const removeBtn = document.createElement('button');
+      removeBtn.textContent = 'Remove';
+      removeBtn.classList.add('removeBtn');
       removeBtn.onclick = () => {
         this.removeBook(book);
       };
-      removeBtn.classList.add('removeBtn');
-      removeBtn.textContent = 'Remove';
-      tr.appendChild(removeBtn);
+
+      const tdAction = document.createElement('td');
+      tdAction.appendChild(removeBtn);
+      tr.appendChild(tdAction);
       bookList.appendChild(tr);
     });
   }
@@ -37,6 +42,7 @@ class BookCollection {
     localStorage.setItem('books', JSON.stringify(this.books));
   }
 }
+
 const bookCollection = new BookCollection();
 // eslint-disable-next-line no-unused-vars
 function addBook() {
@@ -53,4 +59,3 @@ function addBook() {
 }
 
 bookCollection.displayBooks();
-

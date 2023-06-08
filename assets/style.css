@@ -13,7 +13,7 @@ body {
   margin-right: 22px;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   color: #000 !important;
 }
 
@@ -39,7 +39,7 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.add-book-title{
+.add-book-title {
   padding: 2px 5px 10px 5px;
 }
 
