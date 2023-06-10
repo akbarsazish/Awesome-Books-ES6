@@ -41,18 +41,16 @@
     <li><a href="#">HTML</a></li>
     <li><a href="#">CSS</a></li>
     <li><a href="#">JavaScript </a></li>
-    <li><a href="#">Git Hub & Git</a></li>
+    <li><a href="#"> Bootstrap </a></li>
   </ul>
 </details>
-
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-- **[Represent_Learn_HTML_CSS_JavaScript]** 
-- **[Represnt_Front_end_back_end_mobile_app_and_web_design_tutorials]** 
-- **[Responsive_with_the_view_of_desktop_and_mobile]** 
-- **[You_can_lists_books]** 
+- **[List_all_books]** 
+- **[Add_books]** 
+- **[Delete_books]** 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -60,7 +58,8 @@
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> - [Live Demo On Gh-pages](#)
+> - [Live Demo On Gh-pages](https://akbarsazish.github.io/awesome-books)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -69,12 +68,11 @@
 ## 💻 Getting Started <a name="getting-started"></a>
 
 
-To get a local copy up and running, follow these steps.
+To get a local copy up and run the project, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
-HTML, CSS, Git and GitHub also Linters
+In order to run this project you need: Browser
 
 
 ### Setup
