@@ -59,7 +59,7 @@
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> - [Live Demo On Gh-pages](https://akbarsazish.github.io/awesome-books)
+> - [Live Demo On Gh-pages](https://akbarsazish.github.io/Awesome-Books-ES6)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
